@@ -1,103 +1,217 @@
 @import url('https: //fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #000;
-    list-style-type: none;
-    font-family: "Roboto", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: #000;
+	list-style-type: none;
+	font-family: "Roboto", sans-serif;
 }
 
 header {
-    display: flex;
-    width: 80%;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgb(228, 254, 255);
-    margin: 20px auto 40px;
+	display: flex;
+	width: 80%;
+	justify-content: center;
+	flex-direction: column;
+	background-color: rgb(228, 254, 255);
+	margin: 20px auto 40px;
 }
 
 header .page-title {
-    font-size: 36px;
-    margin: auto;
-    padding: 0px 12px;
+	font-size: 36px;
+	margin: auto;
+	padding: 0px 12px;
 }
 
 header .page-sub-title {
-    margin: 0px auto 16px;
+	margin: 0px auto 16px;
 }
 
 .search-bar {
-    height: 48px;
-    padding: 8px 12px;
-    font-size: 20px;
-    width: 60%;
-    margin: 0px auto 24px;
+	height: 48px;
+	padding: 8px 12px;
+	font-size: 20px;
+	width: 60%;
+	margin: 0px auto 24px;
 }
 
 .main-container {
-    display: block;
-    width: 100%;
-    /* background-color: coral; */
-    height: 100vh;
+	display: block;
+	width: 100%;
+	/* background-color: coral; */
+	height: 100vh;
 }
 
 .side-bar {
-    display: flex;
-    padding: 12px 16px 32px;
-    border: #000 solid 1px;
-    width: 16%;
-    margin: 16px;
-    flex-direction: column;
-    float: left;
+	display: flex;
+	padding: 12px 16px 32px;
+	border: #000 solid 1px;
+	width: 16%;
+	margin: 16px;
+	flex-direction: column;
+	float: left;
 }
 
 .side-bar.right {
-    float: right;
-    width: 18%;
-    margin: 16px;
+	float: right;
+	width: 18%;
+	margin: 16px;
 }
 
 .side-bar > .main-title {
-    margin: 0px auto 12px;
+	margin: 0px auto 12px;
 }
 
 .side-bar > .sub-title {
-    margin: 8px autox;
+	margin: 8px autox;
 }
 
 .side-bar .sub-header {
-    cursor: pointer;
-    padding: 4px 12px;
-    /* background-color: rgb(240, 240, 240); */
+	cursor: pointer;
+	padding: 4px 12px;
+	/* background-color: rgb(240, 240, 240); */
 }
 
 .side-bar .sub-header:hover {
-    padding: 4px 16px;
-    color: #8c8c8c;
-    transition: ease-in-out 200ms;
+	padding: 4px 16px;
+	color: #8c8c8c;
+	transition: ease-in-out 200ms;
 }
 
 .side-bar.right > ul.related > li {
-    padding: 0px 12px;
-    margin: 8px 0px;
-    cursor: pointer;
+	padding: 0px 12px;
+	margin: 8px 0px;
+	cursor: pointer;
 }
 
 .side-bar.right > ul.related > li:hover {
-    color: #8c8c8c;
+	color: #8c8c8c;
 }
 
 .alignmentor {
-    height: 100%;
-    margin: auto;
-    width: 60%;
+	/* height: 100%; */
+	margin: auto;
+	width: 60%;
 }
 
 .content {
-    border: rgb(29, 206, 138) solid 1px;
-    margin-left: -4%;
-    background-color: rgb(244, 255, 244);
-    height: 100%;
+	margin-left: -4%;
+	/* background-color: rgb(244, 255, 244); */
+	height: 100%;
+	padding: 36px;
+}
+
+.content > section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 24px;
+}
+
+section.intro {
+	flex-direction: row;
+}
+
+.text-block {
+	/* background-color: orange; */
+	text-indent: 12px;
+	padding: 12px;
+	display: inline-block;
+	margin: 36px;
+}
+
+.img-block {
+	display: flex;
+	width: auto;
+	/* background-color: rgb(255, 255, 216); */
+	width: 36%;
+	margin-left: 24px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.text-block.left {
+	width: 60%;
+}
+
+.text-block p {
+	margin: 12px 0px;
+	font-size: 16px;
+}
+
+.text-block .list-1-level.with-img {
+	display: flex;
+	flex-direction: row;
+	/* background-color: cornflowerblue; */
+	gap: 32px;
+}
+
+
+.img-block > img {
+	width: 240px;
+	height: 240px;
+}
+
+.img-block > .desc {
+	/* background-color: rgb(253, 205, 143); */
+}
+
+section > .title {
+	font-size: 32px;
+}
+
+section > table.equations {
+	width: 80%;
+	margin: 12px auto;
+	/* background-color: #8c8c8c; */
+}
+
+table.equations > tbody > tr {
+	margin: 4px 0px;
+}
+
+table.equations > tbody > tr > td {
+	padding: 8px 12px;
+	/* background-color: coral; */
+}
+
+.table-row {
+	display: flex;
+	flex-direction: row;
+	/* background-color: darkcyan; */
+	width: 80%;
+	justify-content: space-around;
+	margin: auto;
+}
+
+table.compare-table {
+	/* background-color: darkgreen; */
+	/* flex-grow: 100px; */
+	display: inline-block;
+	gap: 0xp;
+	border-collapse: collapse;
+}
+
+table.compare-table td,
+table.compare-table th {
+	padding: 8px 12px;
+	border: #000 1px solid;
+}
+
+thead > tr > td,
+table.compare-table > :nth-child(n) > :nth-child(n) > :nth-child(n):first-child {
+	background-color: #b7b7b7;
+	margin: 0px;
+
+}
+
+.one-line {
+	display: flex;
+	/* background-color: darkolivegreen; */
+	width: 50%;
+	margin: auto;
+	justify-content: space-around;
+	font-size: 20px;
 }

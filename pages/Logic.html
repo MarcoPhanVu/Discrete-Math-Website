@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hàm Boole</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<header>
+		<h1 class="page-title">TÔI RỤNG RỜI - Logic</h1>
+		<h2 class="page-sub-title">Hệ cơ sở tri thức môn Toán Rời Rạc</h2>
+		<input type="text" class="search-bar" placeholder="Type something" id="search-bar">
+		<ul class="suggestions" id="suggestions">
+			<li class="suggestion-item">Xin em hãy yêu thương cho người dưng ở khắp trần gian</li>
+			<li class="suggestion-item">Xin em hãy yêu thương cho người dưng ở khắp trần gian</li>
+		</ul>
+	</header>
+	<div class="back-to-top"></div>
+	<div class="main-container">
+		<div class="side-bar left">
+			<h2 class="main-title">Mệnh đề toán học - Logic</h2>
+			<div class="indexes">
+				<ul class="chapters-container">
+					<li class="chapter-item">
+						<h4 class="sub-title"><a href="#introduction">I. Khái niệm</a></h4>
+						<ul class="chapter">
+							<li class="sub-header"><a href="#introduction">Khái niệm</a></li>
+						</ul>
+					</li>
+					<li class="chapter-item">
+						<h4 class="sub-title"><a href="#statement-sentences">II. Mệnh đề và câu</a></h4>
+						<ul class="chapter">
+							<li class="sub-header"><a href="#statement-sentences">Định nghĩa</a></li>
+						</ul>
+					</li>
+					<li class="chapter-item">
+						<h4 class="sub-title"><a href="#statement-logic">III. Mệnh đề Logic</a></h4>
+						<ul class="chapter">
+							<li class="sub-header"><a href="#statement-logic">Định nghĩa</a></li>
+						</ul>
+					</li>
+					<li class="chapter-item">
+						<h4 class="sub-title"><a href="#applications">IV. Ví dụ</a></h4>
+						<ul class="chapter">
+							<li class="sub-header"><a href="#applications">Giải toán bằng suy luận Logic</a></li>
+							<li class="sub-header"><a href="#applications-technical">Giải toán trong kỹ thuật</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="side-bar right">
+			<h2 class="main-title">Các chủ đề liên quan</h2>
+			<ul class="related topics">
+				<li class="topic">Chúc em tình yêu mới</li>
+
+			</ul>
+			<h2 class="main-title" style="margin-top: 16px;">Các từ khoá liên quan</h2>
+			<ul class="related keywords">
+				<li class="keyword">Chúc em</li>
+			</ul>
+		</div>
+
+		<div class="alignmentor">
+			<div class="content">
+				<section class="intro" id="introduction">
+					<h1 class="title">Khái niệm</h1>
+					<div class="extra-row">
+						<div class="text-block">
+							<p class="desc">Trong logic toán, một phân ngành <strong>logic</strong>, cơ sở của mọi ngành toán học, <strong>mệnh đề</strong>, hay gọi đầy đủ là <strong>mệnh đề logic</strong> là một khái niệm nguyên thủy, không định nghĩa.</p>
+							<p class="desc">Thuộc tính cơ bản của một mệnh đề là giá trị chân lý của nó, được quy định như sau:</p>
+							<ul class="list-1-container">
+								<li class="list-1-level">
+									<p class="desc">
+										Mỗi mệnh đề có đúng một trong hai giá trị chân lý 0 hoặc 1. Mệnh đề có giá trị chân lý 1 là mệnh đề đúng, mệnh đề có giá trị chân lý 0 là mệnh đề sai.
+									</p>
+								</li>
+							</ul>
+							<p class="desc">Ký hiệu:</p>
+							<ul class="list-1-container">
+								<li class="list-1-level">
+									<p class="desc">
+										Người ta thường dùng các chữ cái a, b, c,... để ký hiệu cho các mệnh đề
+									</p>
+									<p class="desc">
+										Nếu mệnh đề a có giá trị chân lý là 1 thì ta ký hiệu G(a) = 1; nếu mệnh đề a có giá trị chân lý là 0 thì ta ký hiệu là G(a) = 0.
+									</p>
+								</li>
+							</ul>
+							<p class="desc">Chẳng hạn, để ký hiệu a là mệnh đề "Paris là thủ đô của nước Pháp" ta sẽ viết:</p>
+							<ul class="list-1-container">
+								<li class="list-1-level">
+									<p class="desc">a = "Paris là thủ đô của nước Pháp"</p>
+									<p>hoặc</p>
+									<p class="desc">a: "Paris là thủ đô của nước Pháp"</p>
+								</li>
+							</ul>
+							<p class="desc">Ở đây, a là mệnh đề đúng nên G(a) = 1.</p>
+							<p class="desc">Chú ý:</p>
+							<ul class="list-1-container">
+								<li class="list-1-level">
+									<p class="desc">1. Trong thực tế có những mệnh đề mà tính đúng sai của nó luôn gắn với một thời gian và địa điểm cụ thể: đúng ở thời gian hoặc địa điểm này nhưng sai ở thời gian hoặc địa điểm khác. Nhưng ở bất kì thời điểm nào, địa điểm nào cũng luôn có giá trị chân lý đúng hoặc sai. Chẳng hạn:</p>
+								</li>
+								<li class="list-1-level">
+									<ul class="list-1-container">
+										<li class="list-2-level">
+											<p class="desc">Sáng nay bạn An đi học.</p>
+										</li>
+										<li class="list-2-level">
+											<p class="desc">Trời mưa..</p>
+										</li>
+										<li class="list-2-level">
+											<p class="desc">Học sinh tiểu học đang đi nghỉ hè.</p>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="list-1-container">
+								<li class="list-1-level">
+									<p class="desc">2. Ta thừa nhận các luật sau đây của logic mệnh đề:</p>
+								</li>
+								<li class="list-1-level">
+									<ul class="list-1-container">
+										<li class="list-2-level">
+											<p class="desc">Luật bài trùng: Mỗi mệnh đề phải hoặc đúng, hoặc sai; không có mệnh đề nào không đúng cũng không sai.</p>
+										</li>
+										<li class="list-2-level">
+											<p class="desc">Luật mâu thuẫn: Không có mệnh đề nào vừa đúng lại vừa sai.</p>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="list-1-container">
+								<li class="list-1-level">
+									<p class="desc">Có những mệnh đề mà ta không biết (hoặc chưa biết) đúng hoặc sai nhưng biết "chắc chắn" nó nhận một giá trị. Chẳng hạn:</p>
+								</li>
+								<li class="list-1-level">
+									<ul class="list-1-container">
+										<li class="list-2-level">
+											<p class="desc">Trên Sao Hỏa có sự sống.</p>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="" id="statement-sentences">
+					<h1 class="title">Mệnh đề và câu</h1>
+					<div class="text-block">
+						<p class="desc">Mệnh đề có thể là một câu nhưng không phải mọi câu đều là mệnh đề. Có thể chia các câu trong khoa học cũng như trong cuộc sống ra làm hai loại: loại thứ nhất gồm những câu phản ánh tính đúng hoặc sai một thực tế khách quan và loại thứ hai gồm những câu không phản ánh tính đúng hoặc sai một thực tế khách quan nào. Những câu thuộc loại thứ nhất là chính những mệnh đề. Vì vậy có thể nói: "Mệnh đề là một câu khẳng định có tính chất hoặc đúng hoặc sai".</p>
+					</div>
+					<table class="equations">
+						<tbody>
+							<tr>
+								<td>"Paris là thủ đô của nước Pháp"</td>
+								<td>← là mệnh đề đúng.</td>
+							</tr>
+							<tr>
+								<td>"Nước Việt Nam nằm ở châu Âu"</td>
+								<td>← là mệnh đề sai.</td>
+							</tr>
+							<tr>
+								<td>"Tháng 12 có 28 ngày"  </td>
+								<td>← là mệnh đề sai.</td>
+							</tr>
+							<tr>
+								<td>"Một năm có 12 tháng và mỗi tuần có 7 ngày"</td>
+								<td>← là mệnh đề đúng.</td>
+							</tr>
+							<tr>
+								<td>"20 là số chẵn"  </td>
+								<td>← là mệnh đề đúng.</td>
+							</tr>
+							<tr>
+								<td>"Số 123 chia hết cho 3"  </td>
+								<td>← là mệnh đề đúng.</td>
+							</tr>
+							<tr>
+								<td>"2 cộng với 3 bằng 7"  </td>
+								<td>← là mệnh đề sai.</td>
+							</tr>
+							<tr>
+								<td> "15 lớn hơn 30"</td>
+								<td>← là mệnh đề sai.</td>
+							</tr>
+							<tr>
+								<td><ul class="list-1-level">
+									<li>Các câu sau</li>
+									<li class="list-1-level">
+										<ul>
+											<li>"Cuốn sách này giá bao nhiêu tiền?"</li>
+											<li>"Bao giờ lớp mình đi tham quan Đền Hùng?"</li>
+											<li>"Ôi! ngôi nhà mới đẹp làm sao!"</li>
+											<li>"Tất cả hãy anh dũng tiến lên!"</li>
+										</ul>
+									</li>
+								</ul></td>
+								<td>← không phải mệnh đề.</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="desc">Nhận xét: nói chung những câu nghi vấn, câu cảm thán, câu mệnh lệnh đều không phải là mệnh đề.</p>
+				</section>
+				
+				<section id="statement-logic">
+					<h1 class="title">Mệnh đề logic và mệnh đề mờ</h1>
+					<div class="text-block">
+						<p class="desc">Nếu như trong logic toán, một mệnh đề chỉ có thể nhận một trong hai giá trị chân lý 0 hoặc 1 thì trong Trí tuệ nhân tạo người ta dùng logic mờ, mà ở đó giá trị chân lý của một mệnh đề là một số nằm giữa 0 và 1. Mệnh đề có giá trị chân lý 0 là sai, có giá trị chân lý 1 là đúng. Còn giá trị chân lý nằm giữa 0 và 1 chỉ ra mức độ thay đổi của chân lý.</p>
+					</div>
+				</section>
+
+				<section id="applications">
+					<h1 class="title">Ứng dụng</h1>
+					<h1>Giải bài toán bằng suy luận logic</h1>
+					<div class="text-block">
+						<ul class="list-1-container">
+							<li class="list-1-level">
+								<p class="desc">
+									Thông thường khi giải một bài toán dùng công cụ của logic mệnh đề ta tiến hành theo các bước sau:
+								</p>
+							</li>
+							<li class="list-1-level">
+								<ul>
+									<li class="list-2-level">
+										<p class="desc">
+											Bước 1: Phiên dịch đề bài từ ngôn ngữ đời thường sang ngôn ngữ của logic mệnh đề:
+										</p>
+										<ul>
+											<li class="list-3-level">Tìm xem bài toán được tạo thành từ những mệnh đề nào.</li>
+											<li class="list-3-level">Diễn đạt các điều kiện (đã cho và phải tìm) trong bài toán bằng ngôn ngữ của logic mệnh đề.</li>
+										</ul>
+									</li>
+									<li class="list-2-level">
+										<p class="desc">
+											Bước 2: Phân tích mối liên hệ giữa điều kiện đã cho với kết luận của bài toán bằng ngôn ngữ của logic mệnh đề.
+										</p>
+									</li>
+									<li class="list-2-level">
+										<p class="desc">
+											Bước 3: Dùng các phương pháp suy luận logic dẫn dắt từ các điều kiện đã cho tới kết luận của bài toán.
+										</p>
+									</li>
+								</ul>
+							</li>
+							<li class="list-1-level">
+								<h2 class="m-t-24">Ví dụ:</h2>
+								<p class="desc">
+									Tại Tiger Cup 98 có bốn đội lọt vào vòng bán kết: Việt Nam, Singapore, Thái Lan và Indonesia. Trước khi thi đấu vòng bán kết, ba bạn Dũng, Quang, Trung dự đoán như sau:
+								</p>
+								<ul class="list-2-container">
+									<li class="list-2-level">
+										<p class="desc">Dụng: Singapore nhì, còn Thái Lan ba.</p>
+										<p class="desc">Quang: Việt Nam nhì, còn Thái Lan tư.</p>
+										<p class="desc">Trung: Singapore nhất và Indonesia nhì.</p>
+									</li>
+								</ul>
+								<p class="desc">
+									Kết quả, mỗi bạn dự đoán đúng một đội và sai một đội. Hỏi mỗi đội đã đạt giải mấy?
+								</p>
+								<p class="desc">
+									Ký hiệu các mệnh đề:
+								</p>
+								<ul class="list-2-container">
+									<li class="list-2-level">
+										<p class="desc">d1, d2 là hai dự đoán của Dụng.</p>
+										<p class="desc">q1, q2 là hai dự đoán của Quang.</p>
+										<p class="desc">t1, t2 là hai dự đoán của Trung.</p>
+									</li>
+								</ul>
+								<p class="desc">
+									Nếu G(d1) = 1 thì G(t1) = 0. Suy ra G(t2) = 1. Điều này vô lý vì cả hai đội Singapore và Indonesia đều đạt giải nhì.
+								</p>
+								<p class="desc">
+									Nếu G(d1) = 0 thì G(d2) = 1. Suy ra G(q2) = 0 và G(q1) = 1. Suy ra G(t2) = 0 và G(t1) = 1.
+								</p>
+								<p class="desc">
+									Vậy Singapore nhất, Việt Nam nhì, Thái Lan ba còn Indonesia đạt giải tư.
+								</p>
+							</li>
+						</ul>
+					</div>
+					<br><br><br>
+					<br><br><br>
+					<br><br><br>
+
+					<h1 id="applications-technical" id="applications-2">Giải bài toán trong kĩ thuật</h1>
+					<div class="text-block">
+						<ul class="list-1-container">
+							<li class="list-1-level">
+								<p class="desc">Mệnh đề logic còn được ứng dụng trong kĩ thuật lắp ráp các mạch điện và thiết bị trong nhà máy. Dưới đây là một ví dụ minh họa</p>
+							</li>
+							<li class="list-1-level">
+								<p class="desc">Giữa công tắc và dây may so của một chiếc Bàn là có rơle tự ngắt (để khi dây may so nóng đến nhiệt độ quy định cho phép thì rơle tự ngắt mạch điện cho Bàn là được an toàn). Hãy thiết lập nguyên tắc logic của quá trình hoạt động của chiếc Bàn là đó (thiết lập mối liên hệ giữa việc đóng, ngắt mạch của công tắc, rơle với nhiệt độ cho phép của dây may so).</p>
+								<p class="desc">
+									Ký hiệu các mệnh đề:
+								</p>
+								<ul class="list-2-container">
+									<li class="list-2-level">
+										<p class="desc">c = "Công tắc Bàn là đóng mạch".</p>
+										<p class="desc">r = "Rơ le Bàn là đóng mạch".</p>
+										<p class="desc">t = "Dây may so trong Bàn là nóng tới nhiệt độ cho phép".</p>
+									</li>
+								</ul>
+								<p class="desc">Mối liên hệ giữa trạng thái an toàn của Bàn là và giá trị chân lý của các mệnh đề c, r, t có thể biểu diễn bởi bảng sau:</p>
+								<div class="table-row">
+									<table class="compare-table">
+										<thead>
+											<td>Trạng thái</td>
+											<td>c</td>
+											<td>r</td>
+											<td>t</td>
+											<td>Trạng thái an toàn</td>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>1</td>
+												<td>không</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>1</td>
+												<td>1</td>
+												<td>0</td>
+												<td>có</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>1</td>
+												<td>0</td>
+												<td>1</td>
+												<td>có</td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td>1</td>
+												<td>0</td>
+												<td>0</td>
+												<td>không</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>0</td>
+												<td>1</td>
+												<td>1</td>
+												<td>không</td>
+											</tr>
+											<tr>
+												<td>6</td>
+												<td>0</td>
+												<td>1</td>
+												<td>0</td>
+												<td>có</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td>0</td>
+												<td>0</td>
+												<td>1</td>
+												<td>có</td>
+											</tr>
+											<tr>
+												<td>8</td>
+												<td>0</td>
+												<td>0</td>
+												<td>0</td>
+												<td>không</td>
+											</tr>
+											<tr>
+										</tbody>
+									</table>
+								</div>
+							</li>
+							<li class="list-1-level">
+								<p class="desc">
+									Nhìn vào bảng trên ta thấy:
+								</p>
+								<ul class="list-2-container">
+									<li class="list-2-level">
+										<p class="desc">Trạng thái 1 và 5 không đảm bảo an toàn, vì khi dây may so đã nóng tới nhiệt độ quy định cho phép mà rơle vẫn đóng mạch thì dẫn đến hỏng Bàn là hoặc đồ là.</p>
+										<p class="desc">Trạng thái 4 và 8 không đảm bảo an toàn vì dây may so chưa nóng tới nhiệt độ quy định cho phép mà rơle đã ngắt mạch thì Bàn là không sử dụng được.</p>
+									</li>
+								</ul>
+								<p class="desc">
+									Các trạng thái còn lại: 2, 3, 6 và 7 đều đảm bảo an toàn. Các trạng thái đó được mô tả bằng các công thức logic sau:
+								</p>
+								<div class="img-block" style="background-color: #c00000; margin: auto;">
+									<img src="../Source/State and Equation Table 1.PNG" style="height: 200px; width: 400px; margin: auto;" alt="State and Equation Table">
+								</div>
+								<p class="desc">
+									Quy trình trên ta có thể phát biểu thành lời như sau: để Bàn là hoạt động an toàn phải đảm bảo nguyên tắc: "Công tắc rơle đóng mạch khi và chỉ khi nhiệt độ dây may so chưa tới hạn cho phép" hay "nhiệt độ dây may so tới hạn cho phép khi và chỉ khi công tắc rơle ngắt mạch điện"
+								</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<script src="../script.js"></script>
+</body>
+</html>

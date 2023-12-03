@@ -1,4 +1,4 @@
-@import url('https: //fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 * {
 	margin: 0;
@@ -6,7 +6,30 @@
 	box-sizing: border-box;
 	color: #000;
 	list-style-type: none;
-	font-family: "Roboto", sans-serif;
+	font-family: "Nunito", sans-serif;
+}
+
+body {
+	position: relative;
+}
+html {
+	scroll-behavior: smooth !important;
+	
+}
+
+.m-t-24 {
+	margin-top: 24px;
+}
+
+.back-to-top {
+	position: fixed;
+	bottom: 16px;
+	right: 16px;
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	background-color: #000;
+	cursor: pointer;
 }
 
 header {
@@ -21,7 +44,7 @@ header {
 header .page-title {
 	font-size: 36px;
 	margin: auto;
-	padding: 0px 12px;
+	padding: 0px 4px;
 }
 
 header .page-sub-title {
@@ -109,7 +132,13 @@ header .page-sub-title {
 	margin-bottom: 24px;
 }
 
-section.intro {
+section {
+	display: flex;
+	flex-direction: column;
+}
+
+section.intro > .extra-row {
+	display: flex;
 	flex-direction: row;
 }
 
@@ -118,7 +147,13 @@ section.intro {
 	text-indent: 12px;
 	padding: 12px;
 	display: inline-block;
-	margin: 36px;
+	margin: 24px;
+}
+
+p.desc {
+	margin: 4px 0px;
+	padding: 2px;
+	/* background-color: darkcyan; */
 }
 
 .img-block {
@@ -137,7 +172,7 @@ section.intro {
 }
 
 .text-block p {
-	margin: 12px 0px;
+	margin: 4px 0px;
 	font-size: 16px;
 }
 
@@ -148,6 +183,19 @@ section.intro {
 	gap: 32px;
 }
 
+.list-1-level > ul > li.list-2-level > p.desc {
+	text-indent: 48px;
+}
+
+.text-block .list-1-level p.desc,
+.list-1-level > ul > li {
+	margin: 4px 0px;
+	text-indent: 24px;
+}
+
+.text-block .list-2-level p {
+	text-indent: 48px;
+}
 
 .img-block > img {
 	width: 240px;
@@ -160,6 +208,7 @@ section.intro {
 
 section > .title {
 	font-size: 32px;
+	margin-top: 16px; 
 }
 
 section > table.equations {
@@ -173,8 +222,9 @@ table.equations > tbody > tr {
 }
 
 table.equations > tbody > tr > td {
-	padding: 8px 12px;
+	padding: 4px 12px;
 	/* background-color: coral; */
+	margin: auto;
 }
 
 .table-row {
@@ -190,7 +240,7 @@ table.compare-table {
 	/* background-color: darkgreen; */
 	/* flex-grow: 100px; */
 	display: inline-block;
-	gap: 0xp;
+	gap: 0px;
 	border-collapse: collapse;
 }
 
@@ -204,7 +254,7 @@ thead > tr > td,
 table.compare-table > :nth-child(n) > :nth-child(n) > :nth-child(n):first-child {
 	background-color: #b7b7b7;
 	margin: 0px;
-
+	text-align: center;
 }
 
 .one-line {

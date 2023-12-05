@@ -21,6 +21,11 @@ html {
 	margin-top: 24px;
 }
 
+.to-home {
+	text-align: center;
+	text-decoration: none;
+}
+
 .back-to-top {
 	position: fixed;
 	bottom: 16px;

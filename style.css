@@ -39,11 +39,13 @@ html {
 
 header {
 	display: flex;
-	width: 80%;
+	width: 64%;
 	justify-content: center;
 	flex-direction: column;
 	background-color: rgb(228, 254, 255);
 	margin: 20px auto 40px;
+	padding: 24px 0px;
+	border-radius: 36px;
 }
 
 header .page-title {
@@ -57,11 +59,38 @@ header .page-sub-title {
 }
 
 .search-bar {
+	width: 80%;
+	background-color: antiquewhite;
+	margin: 0px auto;
+	display: flex;
+}
+
+.search-bar > #search-bar {
 	height: 48px;
-	padding: 8px 12px;
-	font-size: 20px;
-	width: 60%;
-	margin: 0px auto 24px;
+	padding: 6px 10px;
+	font-size: 18px;
+	flex: 11;
+}
+
+.search-bar > .search-btn {
+	flex: 1;
+}
+
+#suggestion {
+	width: 80%;
+	margin: 0px auto;
+	border: 1px solid #cacaca;
+	
+}
+
+#suggestion > .suggestion-item {
+	padding: 6px 8px;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+#suggestion > .suggestion-item:hover {
+	background-color: #f5f5f5;
 }
 
 .main-container {

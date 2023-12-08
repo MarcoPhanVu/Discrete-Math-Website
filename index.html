@@ -4,21 +4,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hàm Boole</title>
-	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
 	<header>
 		<a href="../" class="to-home">
-			<h1 class="page-title">TÔI RỤNG RỜI</h1>
+			<h1 class="page-title" id="state-1">TÔI RỤNG RỜI</h1>
 			<h2 class="page-sub-title">Hệ cơ sở tri thức môn Toán Rời Rạc</h2>
 		</a>
 		<label for="search-bar" class="search-bar">
+			<p class="search-message hidden">Come on, at least type something first.</p>
 			<input type="text" placeholder="Type something" id="search-bar">
-			<button for="search-bar" class="search-btn">Find</button>
+			<button for="search-bar" id="search-btn">Find</button>
+			<ul class="suggestions" id="suggestion">
 		</label>
-		<ul class="suggestions" id="suggestion">
-			<li class="suggestion-item">Xin em hãy yêu thương cho người dưng ở khắp trần gian</li>
-			<li class="suggestion-item">Xin em hãy yêu thương cho người dưng ở khắp trần gian</li>
 		</ul>
 	</header>
 	<div class="back-to-top"></div>
@@ -28,22 +27,22 @@
 			<div class="indexes">
 				<ul class="chapters-container">
 					<li class="chapter-item">
-						<h4 class="sub-title"><a href="./pages/Boolean.html#introduction">I. Khái niệm</a></h4>
+						<h4 class="sub-title"><a href="../pages/Boolean.html#introduction">I. Khái niệm</a></h4>
 						<ul class="chapter">
-							<li class="sub-header"><a href="./pages/Boolean.html#introduction">Khái niệm</a></li>
+							<li class="sub-header"><a href="../pages/Boolean.html#introduction">Khái niệm</a></li>
 						</ul>
 					</li>
 					<li class="chapter-item">
-						<h4 class="sub-title"><a href="./pages/Boolean.html#definition">II. Định nghĩa</a></h4>
+						<h4 class="sub-title"><a href="../pages/Boolean.html#definition">II. Định nghĩa</a></h4>
 						<ul class="chapter">
-							<li class="sub-header"><a href="./pages/Boolean.html#definition">Định nghĩa</a></li>
+							<li class="sub-header"><a href="../pages/Boolean.html#definition">Định nghĩa</a></li>
 						</ul>
 					</li>
 					<li class="chapter-item">
-						<h4 class="sub-title"><a href="./pages/Boolean.html#example">III. Ví dụ</a></h4>
+						<h4 class="sub-title"><a href="../pages/Boolean.html#example">III. Ví dụ</a></h4>
 						<ul class="chapter">
-							<li class="sub-header"><a href="./pages/Boolean.html#example">Đại số Boolean</a></li>
-							<li class="sub-header"><a href="./pages/Boolean.html#example-2">Power Set</a></li>
+							<li class="sub-header"><a href="../pages/Boolean.html#example">Đại số Boolean</a></li>
+							<li class="sub-header"><a href="../pages/Boolean.html#example-2">Power Set</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -55,35 +54,35 @@
 			<div class="indexes">
 				<ul class="chapters-container">
 					<li class="chapter-item">
-						<h4 class="sub-title"><a href="./pages/Logic.html">I. Khái niệm</a></h4>
+						<h4 class="sub-title"><a href="../pages/Logic.html">I. Khái niệm</a></h4>
 						<ul class="chapter">
-							<li class="sub-header"><a href="./pages/Logic.html">Khái niệm</a></li>
+							<li class="sub-header"><a href="../pages/Logic.html">Khái niệm</a></li>
 						</ul>
 					</li>
 					<li class="chapter-item">
-						<h4 class="sub-title"><a href="./pages/Logic.html#statement-sentences">II. Mệnh đề và câu</a></h4>
+						<h4 class="sub-title"><a href="../pages/Logic.html#statement-sentences">II. Mệnh đề và câu</a></h4>
 						<ul class="chapter">
-							<li class="sub-header"><a href="./pages/Logic.html#statement-sentences">Định nghĩa</a></li>
+							<li class="sub-header"><a href="../pages/Logic.html#statement-sentences">Định nghĩa</a></li>
 						</ul>
 					</li>
 					<li class="chapter-item">
-						<h4 class="sub-title"><a href="./pages/Logic.html#statement-logic">III. Mệnh đề Logic</a></h4>
+						<h4 class="sub-title"><a href="../pages/Logic.html#statement-logic">III. Mệnh đề Logic</a></h4>
 						<ul class="chapter">
-							<li class="sub-header"><a href="./pages/Logic.html#statement-logic">Định nghĩa</a></li>
+							<li class="sub-header"><a href="../pages/Logic.html#statement-logic">Định nghĩa</a></li>
 						</ul>
 					</li>
 					<li class="chapter-item">
-						<h4 class="sub-title"><a href="./pages/Logic.html#applications">IV. Ví dụ</a></h4>
+						<h4 class="sub-title"><a href="../pages/Logic.html#applications">IV. Ví dụ</a></h4>
 						<ul class="chapter">
-							<li class="sub-header"><a href="./pages/Logic.html#applications">Giải toán bằng suy luận Logic</a></li>
-							<li class="sub-header"><a href="./pages/Logic.html#applications-technical">Giải toán trong kỹ thuật</a></li>
+							<li class="sub-header"><a href="../pages/Logic.html#applications">Giải toán bằng suy luận Logic</a></li>
+							<li class="sub-header"><a href="../pages/Logic.html#applications-technical">Giải toán trong kỹ thuật</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
 		</div>
 
-		<div class="alignmentor">
+		<div class="alignmentor">                
 			<div class="content">
 				<section class="intro" id="introduction">
 					<h1 class="title">Phương hướng phát triển web</h1>

@@ -9,13 +9,15 @@
 <body>
 	<header>
 		<a href="../" class="to-home">
-			<h1 class="page-title">TÔI RỤNG RỜI</h1>
+			<h1 class="page-title" id="state-1">TÔI RỤNG RỜI</h1>
 			<h2 class="page-sub-title">Hệ cơ sở tri thức môn Toán Rời Rạc</h2>
 		</a>
-		<input type="text" class="search-bar" placeholder="Type something" id="search-bar">
-		<ul class="suggestions" id="suggestions">
-			<li class="suggestion-item">Xin em hãy yêu thương cho người dưng ở khắp trần gian</li>
-			<li class="suggestion-item">Xin em hãy yêu thương cho người dưng ở khắp trần gian</li>
+		<label for="search-bar" class="search-bar">
+			<p class="search-message">Come on, at least type something first.</p>
+			<input type="text" placeholder="Type something" id="search-bar">
+			<button for="search-bar" id="search-btn">Find</button>
+			<ul class="suggestions" id="suggestion">
+		</label>
 		</ul>
 	</header>
 	<div class="back-to-top"></div>
@@ -118,12 +120,12 @@
 							</td>
 								<td>a ∨ 0 = a</td>
 								<td>a ∧ 1 = a</td>
-								<td>Phép đồng nhất </td>
+								<td>Phép đồng nhất</td>
 							</tr>
 							<tr>
 	
-								<td>a ∨ (b ∧ c) = (a ∨ b) ∧ (a ∨ c)  </td>
-								<td>a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c)  </td>
+								<td>a ∨ (b ∧ c) = (a ∨ b) ∧ (a ∨ c)</td>
+								<td>a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c)</td>
 								<td>Phép phân phối</td>
 							</tr>
 							<tr>

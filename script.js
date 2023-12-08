@@ -7,94 +7,141 @@ backToTopBtn.forEach(element => {
 	});
 });
 
+
+const stateRepoter1 = document.getElementById("state-1");
+
+
 const searchBar = document.getElementById("search-bar");
+const searchBtn = document.getElementById("search-btn");
+const searchMsg = document.querySelector(".search-message")
 const suggestionsList = document.getElementById("suggestion");
+
+searchBtn.addEventListener("click", () => {
+	if (searchBar.value.length == 0) {
+		searchMsg.classList.remove("hidden");
+		return;
+	} else {
+		searchMsg.classList.add("hidden");
+	}
+
+	for (let i = 0; i < availableSearches.length; i++) {
+		if (availableSearches[i][0].toLowerCase().includes(searchBar.value.toLowerCase())) {
+			searchBtn.value = availableSearches[i][1];
+			break;
+		}
+
+		stateRepoter1.innerHTML = searchBtn.value;
+		searchBtn.value = '../pages/nuhuh.html';
+	}
+	
+
+	window.location = searchBtn.value;
+	return;
+});
 
 searchBar.addEventListener("keyup", (ev) => {
 	while(suggestionsList.firstChild) { // To remove all childs from the last search
 		suggestionsList.removeChild(suggestionsList.firstChild);
 	}
-
-
+	// stateRepoter1.innerHTML = searchBtn.value;
 	let results = [];
 	let input = searchBar.value.toLowerCase();
 
-	console.log(ev);
-	console.log(searchBar.value);
-	console.log(input.length);
-
-
 	if (input.length > 0) {
-		results = keywords_for_searching.filter((word) => {
-			return word.toLowerCase().includes(input.toLowerCase());
+		results = availableSearches.filter((word) => {
+			return word[0].toLowerCase().includes(input.toLowerCase());
 		});
 
-		results.forEach((item) => {
-			const newItem = document.createElement("li");
-			newItem.classList.add("suggestion-item");
-			newItem.innerHTML = item;
+		if (results.length > 0) {
+			let count = 0;
+			results.forEach((item) => {
+				count++;
+				const newItem = document.createElement("li");
+				newItem.classList.add("suggestion-item");
+				newItem.innerHTML = item[0];
+	
+				newItem.addEventListener('click', (ev) => {
+					searchBar.value = item[0];
+					searchBtn.value = item[1];
 
-			newItem.addEventListener('click', (ev) => {
-				searchBar.value = item;
+					while(suggestionsList.firstChild) { // To remove all suggestions
+						suggestionsList.removeChild(suggestionsList.firstChild);
+					}
+				});
+				if (count <= 12) {
+					suggestionsList.append(newItem);
+				}
 			});
+		}
 
-			suggestionsList.append(newItem);
-		});
-		// while(results.length == 0) { // To remove all childs from the last search
-		// 	suggestionsList.removeChild(suggestionsList.firstChild);
-		// }
 	}
+});
 
-})
 
+let availableSearches = [
+	["Hàm Boole", '../pages/Boolean.html#introduction'],
+	["Hàm Bool?", '../pages/Boolean.html#introduction'],
+	["Hàm Boole là?", '../pages/Boolean.html#introduction'],
+	["Hàm Boole là gì?", '../pages/Boolean.html#introduction'],
+	["George Boole", '../pages/Boolean.html#introduction'],
+	["George Boole là ai?", '../pages/Boolean.html#introduction'],
+	["Khái niệm Hàm Boole", '../pages/Boolean.html#introduction'],
+	["Hàm Boole định nghĩa", '../pages/Boolean.html#definition'],
+	["Định nghĩa hàm Boole", '../pages/Boolean.html#definition'],
+	["Định nghĩa đại số Boole", '../pages/Boolean.html#definition'],
+	["Đại số Boole", '../pages/Boolean.html#definition'],
+	["Ví dụ Đại số Boole", '../pages/Boolean.html#example'],
+	["Đại số Boole ví dụ ", '../pages/Boolean.html#example'],
+	["Bài tập hàm Boole", '../pages/Boolean.html#example'],
+	["Hàm Boole bài tập", '../pages/Boolean.html#example'],
+	["Hàm Boole bài tập 2", '../pages/Boolean.html#example-2'],
+	["Powerset", '../pages/Boolean.html#example-2'],
+	["Power set", '../pages/Boolean.html#example-2'],
+	["tô pô", '../pages/Boolean.html#example-2'],
+	["tô pô không gian", '../pages/Boolean.html#example-2'],
+	["không gian tôpô", '../pages/Boolean.html#example-2'],
+	["không gian tô pô", '../pages/Boolean.html#example-2'],
 
-let keywords_for_searching = [
-	"anh nhà ở đâu thế?",
-	"anh nhà ở Bình Dương",
-	"anh nhà ở Bình Thạnh, phường 22",
-	"anh nhà ở Bình Thạnh, phường 19",
-	"anh nhà ở Bình Thạnh, phuwfong 15",
-	"anh nhà ở Bình Chánh",
-	"anh nhà ở Bình Định",
-	"anh nhà ở Bình Quới",
+	["logic", '../pages/Logic.html'],
+	["logic mệnh đề", '../pages/Logic.html'],
+	["logic và mệnh đề", '../pages/Logic.html'],
+	["logic là gì", '../pages/Logic.html'],
+	["logic là gì?", '../pages/Logic.html'],
+	["logic?", '../pages/Logic.html'],
 
-	"lại một ngày xán lạn ta còn thở giữa thinh không này",
-	"tâm thư là thứ giấu kín không so đo hay phơi bày",
+	["anh nhà ở đâu thế?", '../pages/nuhuh.html'],
+	["anh nhà ở Bình Dương", '../pages/nuhuh.html'],
+	["anh nhà ở Bình Thạnh, phường 22", '../pages/nuhuh.html'],
+	["anh nhà ở Bình Thạnh, phường 19", '../pages/nuhuh.html'],
+	["anh nhà ở Bình Thạnh, phuwfong 15", '../pages/nuhuh.html'],
+	["anh nhà ở Bình Chánh", '../pages/nuhuh.html'],
+	["anh nhà ở Bình Định", '../pages/nuhuh.html'],
+	["anh nhà ở Bình Quới", '../pages/nuhuh.html'],
 
-	"và rồi ta cũng rời bỏ thế gian sau vạn biến cố từ lúc chào đời, cảm tạ loài người nhân ái đã đưa mình về với chốn mù khơi",
-	"và rồi kế tiếp, ta sẽ đến với phần trình diễn của Ăn năn hối lỗi",
-	"và rồi kế tiếp, ta sẽ đến với phần trình diễn của Biến đi đồ con chó",
-	"và rồi kế tiếp, ta sẽ đến với phần trình diễn của Con Cặt",
-	"và rồi kế tiếp, ta sẽ đến với phần trình diễn của D",
+	["asdfg cái này em cũng hay gõ nè", '../pages/nuhuh.html'],
+	["asdfg hê hê", '../pages/nuhuh.html'],
+	["asdqweqwe awmahgah", '../pages/nuhuh.html'],
+	["asdasdv tototto", '../pages/nuhuh.html'],
+	["aadsfah ádfasdasd ád ", '../pages/nuhuh.html'],
+	["asdfvbasfádasdasd áda sdas ", '../pages/nuhuh.html'],
+	["sadfgh common gibberish", '../pages/nuhuh.html'],
+	["adasdasd cái này em cũng hay gõ nè", '../pages/nuhuh.html'],
+	["adasdasdasd hê hê hê hê", '../pages/nuhuh.html'],
+	["adasdasdasdasds test quốc dân", '../pages/nuhuh.html'],
+	["adasdasdasdasdsasd aren\"t we the same?", '../pages/nuhuh.html'],
+	["qwerqwer", '../pages/nuhuh.html'],
 
-	"logic",
-	"logic mệnh đề",
-	"logic và mệnh đề",
-	"logic là gì",
-	"logic là gì?",
-	"logic?",
-	'wasdef há lô thầy',
-	'wasdef há lô Dương',
-	'wasdef há lô Hưng',
-	'wasdef lô Phú',
-	'wasdef há lô Hồng Anh',
-	'wasdef há lô Cao Trung',
-	'wasdef lô Thí Di',
-	'wasdef há lô Cẩm Tin',
+	["wasdef há lô thầy Hiển", '../pages/nuhuh.html'],
+	["wasdef há lô Dương", '../pages/nuhuh.html'],
+	["wasdef há lô Hưng", '../pages/nuhuh.html'],
+	["wasdef lô Phú", '../pages/nuhuh.html'],
+	["wasdef há lô Hồng Anh", '../pages/nuhuh.html'],
+	["wasdef lô Thí Di", '../pages/nuhuh.html'],
+	["wasdef há lô Cẩm Tin", '../pages/nuhuh.html'],
 
-	'asdfg cái này em cũng hay gõ nè',
-	'asdfg hê hê',
-	'asdqweqwe awmahgah',
-	'asdasdv tototto',
-	'aadsfah ádfasdasd ád ',
-	'asdfvbasfádasdasd áda sdas ',
-	'sadfgh common gibberish',
-	'adasdasdasdasds aren\'t we the same?',
-	'qwerqwer',
-
-	'testlist1',
-	'testlist2',
-	'testlist3',
-	'testlist4',
-	'testlist5'
-];
+	["testlist1", '../pages/nuhuh.html'],
+	["testlist2", '../pages/nuhuh.html'],
+	["testlist3", '../pages/nuhuh.html'],
+	["testlist4", '../pages/nuhuh.html'],
+	["testlist5", '../pages/nuhuh.html']
+]

@@ -26,6 +26,15 @@ html {
 	text-decoration: none;
 }
 
+.hidden {
+	display: none !important;
+}
+
+.enlarge-green {
+	font-size: 24px;
+	color: rgb(106, 211, 106);
+}
+
 .back-to-top {
 	position: fixed;
 	bottom: 16px;
@@ -59,10 +68,11 @@ header .page-sub-title {
 }
 
 .search-bar {
-	width: 80%;
-	background-color: antiquewhite;
-	margin: 0px auto;
 	display: flex;
+	position: relative;
+	width: 80%;
+	background-color: rgb(255, 165, 48);
+	margin: 0px auto;
 }
 
 .search-bar > #search-bar {
@@ -72,15 +82,23 @@ header .page-sub-title {
 	flex: 11;
 }
 
-.search-bar > .search-btn {
+.search-bar > #search-btn {
 	flex: 1;
 }
 
+.search-bar > p.search-message {
+	position: absolute;
+	top: -24px;
+	left: 8px;
+	color: red;
+}
+
 #suggestion {
-	width: 80%;
+	position: absolute;
+	top: 48px;
+	width: 100%;
 	margin: 0px auto;
 	border: 1px solid #cacaca;
-	
 }
 
 #suggestion > .suggestion-item {

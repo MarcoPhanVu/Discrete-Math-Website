@@ -103,8 +103,8 @@ let availableSearches = [
 	["không gian tô pô", '../pages/Boolean.html#example-2'],
 
 	["logic", '../pages/Logic.html'],
-	["logic mệnh đề", '../pages/Logic.html'],
-	["logic và mệnh đề", '../pages/Logic.html'],
+	["logic mệnh đề", '../pages/Logic.html#statement-sentences'],
+	["logic và mệnh đề", '../pages/Logic.html#statement-sentences'],
 	["logic là gì", '../pages/Logic.html'],
 	["logic là gì?", '../pages/Logic.html'],
 	["logic?", '../pages/Logic.html'],
